@@ -23,7 +23,7 @@ const SignupForm = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch('http://localhost:3000/user/register', {
+        fetch('http://localhost:3050/user/register', {
             method: 'POST',
             body: JSON.stringify({ user:{firstName: firstName, birthday: birthday, email: email, password: password, about: about, zodiac: zodiac}}),
             headers: new Headers({
@@ -46,7 +46,7 @@ const SignupForm = (props) => {
                 <Input required onChange={(e) => setAbout(e.target.value)} name='about' value={about} placeholder="About" />
                 <Input required onChange={(e) => setZodiac(e.target.value)} name='zodiac' value={zodiac} placeholder="Zodiac" />
             </FormContainer>
-            <Marginer direction='vertical' margin={10} />
+            <Marginer direction='vertical' margin='1em' />
             <SubmitButton type='submit' onSubmit={ handleSubmit }>Sign Up</SubmitButton>
             <Marginer direction='vertical' margin='1em' />
             {/* <MutedLink href='#'> */}

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { AccountBox } from './auth/index';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { AccountBox } from '../components/auth/index';
 
-export function Main  ()  {
+
+function Home() {
+
     const [sessionToken, setSessionToken] = useState('');
 
     useEffect (() => {
@@ -19,11 +20,17 @@ export function Main  ()  {
     const clearSession = () => {
         localStorage.clear();
         setSessionToken('');
+        console.log(clearSession);
     }
 
     return (
-        <React.Fragment>
+        <div className="Auth">
+            {console.log(sessionToken)}
+        <div className="Login" class='d-flex justify-content-center'>
             <AccountBox updateToken={ updateToken }/>
-        </React.Fragment>
-    )
+        </div>
+    </div>
+    );
 }
+
+export default Home;

@@ -6,7 +6,7 @@ import LoginForm from './LoginForm';
 import SignupForm from './SignupForm';
 
 const BoxContainer = styled.div`
-    width: 28vw;
+    width: 39vw;
     min-height: 52vh;
     display: flex;
     flex-direction: column;
@@ -23,9 +23,9 @@ const TopContainer = styled.div`
     height: 100px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: flex-center;
     padding: 1.8em;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
 `;
 
 const BackDrop = styled(motion.div)`
@@ -35,7 +35,7 @@ const BackDrop = styled(motion.div)`
     display: flex;
     flex-direction: column;
     border-radius: 20%;
-    transform: rotate(360deg);
+    transform: rotate(160deg);
     top: -390px;
     left: -70px;
     background: rgb(241, 196, 15);
@@ -57,7 +57,6 @@ const HeaderContainer = styled.div`
 const HeaderText = styled.div`
     font-size: 30px;
     font-weight: 600;
-    line-height: 1.24;
     color: #fff;
     z-index: 10;
     margin: 0;
@@ -76,22 +75,22 @@ const InnerContainer = styled.div`
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 1.8em;
-    margin: -2em;
+    align-items: center;
+    padding: 0em;
 `;
 
 const backdropVariants = {
     expanded: {
         width: "233%",
-        height: "1050px",
-        borderRadius: "20%",
-        transform: "rotate(60deg)",
+        height: "1850px",
+        borderRadius: "140%",
+        transform: "rotate(160deg)",
     },
     collapsed: {
-        width: "160%",
-        height: "550px",
-        borderRadius: "10%",
-        transform: "rotate(0deg)",
+        width: "260%",
+        height: "50px",
+        borderRadius: "100%",
+        transform: "rotate(40deg)",
     },
 };
 

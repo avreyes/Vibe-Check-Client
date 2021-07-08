@@ -11,7 +11,7 @@ import { Marginer } from './Marginer';
 import { AccountContext } from './AccountContext';
 
 const LoginForm = (props) => {
-    console.log(props);
+    // console.log(props);
     const { switchToSignup } = useContext(AccountContext);
 
     const [email, setEmail] = useState('');
@@ -20,7 +20,7 @@ const LoginForm = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        fetch('http://localhost:3000/user/login', {
+        fetch('http://localhost:3050/user/login', {
             method: 'POST',
             body: JSON.stringify(
                 {user:{email: email, password: password}}
@@ -45,7 +45,7 @@ const LoginForm = (props) => {
             </FormContainer>
             <Marginer direction='vertical' margin={10} />
             {/* <MutedLink href='#'>Forget your password?</MutedLink> */}
-            <Marginer direction='vertical' margin='1.6em' />
+            <Marginer direction='vertical' margin={10} />
             <SubmitButton type='submit' onSubmit={handleSubmit}>Sign In</SubmitButton>
             <Marginer direction='vertical' margin='1em' />
             {/* <MutedLink href='#'> */}
